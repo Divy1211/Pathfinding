@@ -33,4 +33,4 @@
 12. In my program, left clicking 'blocks/unblocks' a node (refered to as cell in my program) and right clicking sets the starting node A and right clicking again sets the target node B. after the path is reached, right clicking again will set a new target node B and starting node A will become the old target node.
 
 13. Here is the demonstration:
-![](https://github.com/Divy1211/Pathfinding/blob/master/pathfinding.gif)
+![](https://github.com/Divy1211/Pathfinding/blob/master/Pathfinding.gif)
