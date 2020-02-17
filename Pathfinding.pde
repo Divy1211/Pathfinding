@@ -40,7 +40,7 @@ void draw() {
         if (newg < neighbouringCell.g || openCells.indexOf(neighbouringCell) == -1) {
           neighbouringCell.g = newg;
           neighbouringCell.h = dist(targetCell.i-neighbouringCell.i, targetCell.j-neighbouringCell.j);
-          neighbouringCell.original = current;
+          neighbouringCell.parent = current;
           if (openCells.indexOf(neighbouringCell) == -1)
             openCells.add(neighbouringCell);
         }
@@ -50,7 +50,7 @@ void draw() {
       Cell t = current;
       while (current != startingCell) {
         path.add(current);
-        current = current.original;
+        current = current.parent;
       }
       openCells.clear();
       closedCells.clear();
@@ -83,7 +83,8 @@ void mousePressed() {
     q++;
   } 
   else {
-    cells[mouseX/w][mouseY/w].blocked = true;
+    Cell clicked = cells[mouseX/w][mouseY/w];
+    clicked.blocked = !clicked.blocked;
   }
 }
 
