@@ -18,7 +18,7 @@
 
 5. The current node is added to a list of 'closedCells'. 
 
-6.The values of the G,H and F costs are calculated for all neighbour nodes of the current node which are not blocked.
+6. The values of the G,H and F costs are calculated for all neighbour nodes of the current node which are not blocked.
 
 7. All of the above neighbours are added to a list of 'openCells' and the current cell is removed from 'openCells'.
 
