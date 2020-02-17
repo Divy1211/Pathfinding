@@ -26,9 +26,9 @@ void draw() {
   int j = 0, i = 0;
   if (targetCell != null && openCells.size() > 0) {
     current = openCells.get(0);
-    for (Cell ocell : openCells) {
-      if (ocell.f() < current.f() || (ocell.f() == current.f() && ocell.h < current.h))
-        current = ocell;
+    for (Cell openCell : openCells) {
+      if (openCell.f() < current.f() || (openCell.f() == current.f() && openCell.h < current.h))
+        current = openCell;
     }
     openCells.remove(current);
     closedCells.add(current);
