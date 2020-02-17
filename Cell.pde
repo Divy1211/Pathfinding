@@ -2,7 +2,7 @@ class Cell {
   int x, y, i, j;
   boolean blocked = false;
   int g, h;
-  Cell original;
+  Cell parent;
   Cell(int x, int y) {
     this.x=x;
     this.y=y;
